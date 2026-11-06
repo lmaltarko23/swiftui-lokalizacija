@@ -27,6 +27,8 @@ struct vwNoteEdit: View {
 }
 
 struct vwNoteDetail: View {
+    @Environment(vmNotes.self) private var vm
+
     var note: Note?
     var body: some View {
         if let note {

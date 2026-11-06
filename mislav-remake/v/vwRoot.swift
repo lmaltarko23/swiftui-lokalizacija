@@ -12,7 +12,7 @@ struct vwRoot: View {
             vwNotesList()
 
         } detail: {
-            vwNoteDetail(note: selectedNote)
+            vwNoteDetail(note: vm.notes.first(where: {$0.Id == vm.activeNote.Id}))
         }.environment(vm)
     }
 }

@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct ModelNote {
+    var Id: UUID?
+}
+
 public class Note {
     public let Id: UUID
     public var Title: String
