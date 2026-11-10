@@ -17,11 +17,16 @@ struct vwSelectANote: View {
 }
 
 struct vwNoteEdit: View {
-    var note: Note
+    @Bindable var note: Note
     var body: some View {
         VStack {
-            Text(note.Title)
-            Text(note.Content)
+            TextField("Title", text: $note.Title).font(.title)
+            HStack {
+                Text("Created at: " + note.CreatedAt.formatted()).padding(.leading, 60)
+                Spacer()
+                Text("Last Modified: " + note.LastModifiedAt.formatted()).padding(.trailing, 60)
+            }
+            TextField("Content", text: $note.Content)
         }
     }
 }
@@ -31,11 +36,13 @@ struct vwNoteDetail: View {
 
     var note: Note?
     var body: some View {
-        if let note {
-            vwNoteEdit(note: note)
-        }
-        else {
-            vwSelectANote()
+        ScrollView {
+            if let note {
+                vwNoteEdit(note: note)
+            }
+            else {
+                vwSelectANote()
+            }
         }
     }
 }

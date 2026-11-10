@@ -27,13 +27,13 @@ struct vwNotesList: View {
 
     var body: some View {
         @Bindable var vm = vm
-        List(selection: $vm.activeNote.Id) {
-            ForEach(vm.notes, id: \.Id) {
-                note in Text(note.Title)
+            List(selection: $vm.activeNote.Id) {
+                ForEach(vm.notes, id: \.Id) {
+                    note in Text(note.Title)
+                }
             }
-        }
-        .listStyle(.sidebar)
-        .navigationTitle("Menu")
+            .listStyle(.sidebar)
+            .navigationTitle("Menu")
     }
 }
 

@@ -11,7 +11,7 @@ struct ModelNote {
     var Id: UUID?
 }
 
-public class Note {
+@Observable public class Note {
     public let Id: UUID
     public var Title: String
     public var Content: String
