@@ -11,7 +11,7 @@
     ],
   },
   "files": [
-    { "kind": "folder", "path": "mislav-remake", "target-membership": [ "mislav-remake" ] },
+    { "kind": "folder", "path": "rampu-ppt", "target-membership": [ "mislav-remake" ] },
     {
       "kind": "group",
       "name": "Products",

@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import SwiftData
 
 struct ModelNote {
     var Id: UUID?
 }
 
-@Observable public class Note {
-    public let Id: UUID
+@Model public class Note {
+    public var Id: UUID
     public var Title: String
     public var Content: String
-    public let CreatedAt: Date
+    public var CreatedAt: Date
     public var LastModifiedAt: Date
     
     init (_ title: String) {
