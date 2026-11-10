@@ -4,6 +4,7 @@ import Playgrounds
 struct vwRoot: View {
     @State private var vm = vmNotes()
     @State private var selectedNote: Note?
+    
 
     var body: some View {
         NavigationSplitView{

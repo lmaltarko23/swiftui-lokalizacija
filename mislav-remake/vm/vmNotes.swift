@@ -42,18 +42,22 @@ import Foundation
         }
     }
     
-    func delNote(_ note: Note) {
-        if let index = getIndex(note) {
+    func delNote(_ id: UUID) {
+        if let index = getIndex(id: id) {
             notes.remove(at: index)
         }
     }
     
-    public func getIndex(_ note: Note) -> Int? {
+    private func getIndex(_ note: Note) -> Int? {
         return notes.firstIndex(where: {$0.Id == note.Id})
     }
     
-    public func getIndex(id: UUID) -> Int? {
+    private func getIndex(id: UUID) -> Int? {
         return notes.firstIndex(where: {$0.Id == id})
+    }
+    
+    public func getNote(id: UUID) -> Note? {
+        return notes.first(where: {$0.Id == id})
     }
     
     

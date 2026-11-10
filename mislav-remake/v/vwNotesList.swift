@@ -24,16 +24,30 @@ struct NotesListRow: View {
 
 struct vwNotesList: View {
     @Environment(vmNotes.self) private var vm
+    @State private var selection : UUID?
 
     var body: some View {
         @Bindable var vm = vm
             List(selection: $vm.activeNote.Id) {
                 ForEach(vm.notes, id: \.Id) {
-                    note in Text(note.Title)
+                    note in Text(note.Title != "" ? note.Title : "New Note")
                 }
             }
             .listStyle(.sidebar)
             .navigationTitle("Menu")
+            .toolbar {
+                Button("New Note", systemImage: "square.and.pencil") {
+                    let note = Note("")
+                    vm.newNote(note)
+                    selection = note.Id
+                }
+                
+                Button("Delete Note", systemImage: "trash.fill") {
+                    if let selection = vm.activeNote.Id {
+                        vm.delNote(selection)
+                    }
+                }
+            }
+        }
     }
-}
 
