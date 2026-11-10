@@ -1,15 +1,15 @@
 import SwiftUI
 
 enum SettingsItem: String, Identifiable, CaseIterable {
-    case notes = "Language"
-    case settings = "Locale"
+    case language = "Language"
+    case locale = "Locale"
 
     var id: Self { self }
 
     var icon: String {
         switch self {
-        case .notes: "translate"
-        case .settings: "globe"
+        case .language: "translate"
+        case .locale: "globe"
         }
     }
 }
@@ -23,7 +23,7 @@ struct SettingsRow: View {
 }
 
 struct vwSettingsList: View {
-    @State private var selection: SettingsItem = .notes
+    @Binding var selection: SettingsItem
 
     var body: some View {
         List(SettingsItem.allCases, selection: $selection ) { item in
@@ -37,7 +37,7 @@ struct vwSettingsList: View {
 
 #Preview {
     NavigationSplitView {
-        vwSettingsList()
+        vwSettingsList(selection: .constant(.language))
     } detail: {
         Text("Detail")
     }

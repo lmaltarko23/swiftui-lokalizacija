@@ -5,6 +5,7 @@ struct vwRoot: View {
     @State private var vm = vmNotes()
     @State private var selectedNote: Note?
     @State private var asideItem: SidebarItem = .notes
+    @State private var settingsItem: SettingsItem = .language
 
 
     var body: some View {
@@ -15,7 +16,7 @@ struct vwRoot: View {
                 vwNotesList()
             }
             else {
-                vwSettingsList()
+                vwSettingsList(selection: $settingsItem)
             }
 
         } detail: {
