@@ -15,7 +15,7 @@ enum NotesListItem: String, Identifiable, CaseIterable {
 }
 
 struct NotesListRow: View {
-    let item: SidebarItem
+    let item: SettingsItem
 
     var body: some View {
         Label(item.rawValue, systemImage: item.icon)

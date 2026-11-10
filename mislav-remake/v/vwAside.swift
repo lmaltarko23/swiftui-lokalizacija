@@ -23,8 +23,8 @@ struct SidebarRow: View {
 }
 
 struct vwAside: View {
-    @State private var selection: SidebarItem? = .notes
-
+    @Binding var selection: SidebarItem
+    
     var body: some View {
         List(SidebarItem.allCases, selection: $selection) { item in
             SidebarRow(item: item)
@@ -37,7 +37,7 @@ struct vwAside: View {
 
 #Preview {
     NavigationSplitView {
-        vwAside()
+        vwAside(selection: .constant(.notes))
     } detail: {
         Text("Detail")
     }
