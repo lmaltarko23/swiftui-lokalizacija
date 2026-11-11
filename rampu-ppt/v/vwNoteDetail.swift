@@ -20,13 +20,13 @@ struct vwNoteEdit: View {
     @Bindable var note: Note
     var body: some View {
         VStack {
-            TextField("Title", text: $note.Title).font(.title)
+            TextField("noteEdit.placeholder.noteTitle", text: $note.Title).font(.title)
             HStack {
                 Text("Created at: " + note.CreatedAt.formatted()).padding(.leading, 60)
                 Spacer()
                 Text("Last Modified: " + note.LastModifiedAt.formatted()).padding(.trailing, 60)
             }
-            TextField("Content", text: $note.Content)
+            TextField("noteEdit.placeholder.noteContent", text: $note.Content)
         }
     }
 }

@@ -34,15 +34,15 @@ struct vwNotesList: View {
                 }
             }
             .listStyle(.sidebar)
-            .navigationTitle("Menu")
+            .navigationTitle("notesList.listTitle")
             .toolbar {
-                Button("New Note", systemImage: "square.and.pencil") {
+                Button("button.new", systemImage: "square.and.pencil") {
                     let note = Note("")
                     vm.newNote(note)
                     selection = note.Id
                 }
                 
-                Button("Delete Note", systemImage: "trash.fill") {
+                Button("button.delete", systemImage: "trash.fill") {
                     if let selection = vm.activeNote.Id {
                         vm.delNote(selection)
                     }
