@@ -1,7 +1,27 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-
+    "Content" : {
+      "comment" : "Placeholder text. Shown in the editor when a note has an empty body/content."
+    },
+    "Delete Note" : {
+      "comment" : "Tooltip on the Delete button (upper right)"
+    },
+    "Menu" : {
+      "comment" : "Title displayed on the notes list"
+    },
+    "New Note" : {
+      "comment" : "Tooltip on the New button (upper right)"
+    },
+    "No note selected" : {
+      "comment" : "Informative text on the note detail view shown when no note selected. Only on Mac. Title"
+    },
+    "Please pick a note" : {
+      "comment" : "Informative text on the note detail view shown when no note selected. Only on Mac. Body/description"
+    },
+    "Title" : {
+      "comment" : "Placeholder text. Shown in the editor when a note has an empty title."
+    }
   },
   "version" : "1.3"
 }

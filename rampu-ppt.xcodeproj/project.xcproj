@@ -8,23 +8,24 @@
     "development": "en",
     "supported": [
       "Base",
+      "hr",
     ],
   },
   "files": [
-    { "kind": "folder", "path": "rampu-ppt", "target-membership": [ "mislav-remake" ] },
+    { "kind": "folder", "path": "rampu-ppt", "target-membership": [ "rampu-ppt" ] },
     {
       "kind": "group",
       "name": "Products",
       "children": [
-        { "path": "<PRODUCTS>/mislav-remake.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
+        { "path": "<PRODUCTS>/rampu-ppt.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
       ],
     },
   ],
   "targets": [
     {
-      "name": "mislav-remake",
+      "name": "rampu-ppt",
       "id": "000000000000000100000000",
-      "product": "Products/mislav-remake.app",
+      "product": "Products/rampu-ppt.app",
       "product-type": "application",
       "build-phases": [
         "compile-sources",
@@ -131,6 +132,7 @@
     "STRING_CATALOG_GENERATE_SYMBOLS": "YES",
     "SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=Debug]": "DEBUG $(inherited)",
     "SWIFT_COMPILATION_MODE[config=Release]": "wholemodule",
+    "SWIFT_EMIT_LOC_STRINGS": "YES",
     "SWIFT_OPTIMIZATION_LEVEL[config=Debug]": "-Onone",
     "TVOS_DEPLOYMENT_TARGET": "27.2",
     "WATCHOS_DEPLOYMENT_TARGET": "27.2",
