@@ -12,13 +12,20 @@ enum SettingsItem: String, Identifiable, CaseIterable {
         case .locale: "globe"
         }
     }
+        
+    var name: String {
+        switch self {
+        case .language: String(localized: "settingsItem.language")
+        case .locale: String(localized: "settingsItem.locale")
+        }
+    }
 }
 
 struct SettingsRow: View {
     let item: SettingsItem
 
     var body: some View {
-        Label(item.rawValue, systemImage: item.icon)
+        Label(item.name, systemImage: item.icon)
     }
 }
 
@@ -31,7 +38,7 @@ struct vwSettingsList: View {
                 .tag(item)
         }
         .listStyle(.sidebar)
-        .navigationTitle("Menu")
+        .navigationTitle("settingsList.title")
     }
 }
 

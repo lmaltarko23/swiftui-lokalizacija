@@ -1,26 +1,50 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Content" : {
-      "comment" : "Placeholder text. Shown in the editor when a note has an empty body/content."
+    "aside.Title" : {
+
     },
-    "Delete Note" : {
-      "comment" : "Tooltip on the Delete button (upper right)"
+    "button.delete" : {
+      "comment" : "top toolbar"
     },
-    "Menu" : {
-      "comment" : "Title displayed on the notes list"
+    "button.new" : {
+      "comment" : "top toolbar"
     },
-    "New Note" : {
-      "comment" : "Tooltip on the New button (upper right)"
+    "Created at: " : {
+
+    },
+    "Last Modified: " : {
+
     },
     "No note selected" : {
-      "comment" : "Informative text on the note detail view shown when no note selected. Only on Mac. Title"
+
+    },
+    "noteEdit.placeholder.noteContent" : {
+
+    },
+    "noteEdit.placeholder.noteTitle" : {
+
+    },
+    "notesList.listTitle" : {
+
     },
     "Please pick a note" : {
-      "comment" : "Informative text on the note detail view shown when no note selected. Only on Mac. Body/description"
+
     },
-    "Title" : {
-      "comment" : "Placeholder text. Shown in the editor when a note has an empty title."
+    "settingsItem.language" : {
+
+    },
+    "settingsItem.locale" : {
+
+    },
+    "settingsList.title" : {
+
+    },
+    "sidebarItem.notes" : {
+
+    },
+    "sidebarItem.settings" : {
+
     }
   },
   "version" : "1.3"

@@ -10,8 +10,8 @@ import SwiftUI
 struct vwSelectANote: View {
     var body: some View {
         VStack {
-            Text("No note selected")
-            Text("Please pick a note")
+            Text("noteEdit.noNoteSelected.title")
+            Text("noteEdit.noNoteSelected.explainer")
         }
     }
 }
@@ -22,9 +22,9 @@ struct vwNoteEdit: View {
         VStack {
             TextField("noteEdit.placeholder.noteTitle", text: $note.Title).font(.title)
             HStack {
-                Text("Created at: " + note.CreatedAt.formatted()).padding(.leading, 60)
+                Text(String(localized: "noteEdit.text.CreatedAt") + " " + note.CreatedAt.formatted()).padding(.leading, 60)
                 Spacer()
-                Text("Last Modified: " + note.LastModifiedAt.formatted()).padding(.trailing, 60)
+                Text(String(localized: "noteEdit.text.CreatedAt") + " " + note.LastModifiedAt.formatted()).padding(.trailing, 60)
             }
             TextField("noteEdit.placeholder.noteContent", text: $note.Content)
         }

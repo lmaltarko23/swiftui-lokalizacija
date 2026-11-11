@@ -12,13 +12,20 @@ enum SidebarItem: String, Identifiable, CaseIterable {
         case .settings: "gear"
         }
     }
+        
+    var name: String {
+        switch self {
+        case .notes: String(localized: "sidebarItem.notes")
+        case .settings: String(localized: "sidebarItem.settings")
+        }
+    }
 }
 
 struct SidebarRow: View {
     let item: SidebarItem
 
     var body: some View {
-        Label(item.rawValue, systemImage: item.icon)
+        Label(item.name, systemImage: item.icon)
     }
 }
 
@@ -31,7 +38,7 @@ struct vwAside: View {
                 .tag(item)
         }
         .listStyle(.sidebar)
-        .navigationTitle("Menu")
+        .navigationTitle("aside.Title")
     }
 }
 
